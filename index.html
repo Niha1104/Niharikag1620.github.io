@@ -1,178 +1,334 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Niharika Garikaparthi | Data Engineer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Niharika Garikaparthi — Data Engineer</title>
+<meta name="description" content="Data Engineer specializing in real-time streaming pipelines, cloud-native data platforms, and production-grade ETL/ELT — Kafka, Spark, Snowflake, Airflow, dbt, AWS.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container nav">
-      <a class="brand" href="#top">Niharika</a>
-      <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button id="themeToggle" class="btn ghost" type="button">☾</button>
+
+<canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="#top" class="nav__mark">niharika<span class="nav__mark-dot">.</span>g</a>
+    <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="#about">about</a></li>
+      <li><a href="#experience">experience</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+    <div class="nav__actions">
+      <button id="theme-toggle" class="icon-btn" aria-label="Toggle light/dark theme" title="Toggle theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+      </button>
     </div>
-  </header>
+  </nav>
+</header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="container">
-        <p class="kicker">Portfolio</p>
-        <h1>Hi, I’m <span class="accent">Niharika Garikaparthi</span> — Data Engineer.</h1>
-        <p class="subhead">
-          Data Engineer with 5+ years of experience building scalable, production-grade data pipelines and cloud-native data platforms across healthcare and financial domains. Skilled in Python, SQL, PySpark, Snowflake, and AWS, with expertise in designing end-to-end ETL/ELT workflows, optimizing performance, and ensuring data quality and reliability.
-          Experienced in implementing incremental processing, monitoring, and validation frameworks to deliver high-quality, analytics-ready datasets. Passionate about leveraging Generative AI and automation to build efficient, data-driven solutions.
-        </p>
+<main>
 
-        <div class="cta">
-          <a class="btn primary" href="#projects">View projects</a>
-          <a class="btn" href="assets/Niharika__Data_Engineer.docx" target="_blank" rel="noopener">Download Resume</a>
-          <a class="btn" href="https://www.linkedin.com/in/niharikag1620/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" href="https://github.com/Niha1104" target="_blank" rel="noopener">GitHub</a>
-          
-        </div>
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero__inner">
+      <p class="eyebrow mono">// data engineer &middot; real-time systems</p>
+      <h1 class="hero__title">
+        Niharika&nbsp;Garikaparthi
+      </h1>
+      <p class="hero__role">I build the pipelines that turn raw events into decisions — in real time.</p>
+      <p class="hero__bio">
+        5+ years designing production-grade streaming and batch data platforms across healthcare, financial
+        services, and consumer-scale event data. Kafka, Spark, Snowflake, Airflow, dbt, and AWS —
+        end to end, from ingestion to the dashboard someone actually reads.
+      </p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">View projects</a>
+        <a href="assets/Niharika__Data_Engineer.docx" class="btn btn--ghost">Download résumé</a>
+        <a href="https://github.com/Niha1104" target="_blank" rel="noopener" class="btn btn--icon" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/niharikaga99/" target="_blank" rel="noopener" class="btn btn--icon" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.3-.02-3-1.83-3-1.83 0-2.1 1.43-2.1 2.9V21h-4V9Z"/></svg>
+        </a>
       </div>
-    </section>
+    </div>
+    <div class="hero__scroll-cue mono" aria-hidden="true">scroll</div>
+  </section>
 
-    <section id="about" class="section">
-      <div class="container">
-        <h2>About</h2>
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section__head">
+      <p class="eyebrow mono">about</p>
+      <h2>Turning raw events into reliable, analytics-ready data.</h2>
+    </div>
+    <div class="about__grid">
+      <div class="about__text">
         <p>
-         I’m a Data Engineer with 5+ years of experience designing and building scalable data pipelines and analytics platforms. I specialize in transforming raw data into reliable, high-quality datasets for reporting, analytics, and machine learning.
-         I have hands-on experience with Python, SQL, PySpark, Snowflake, AWS, and Apache Airflow, and I focus heavily on data quality, performance optimization, and pipeline reliability. I enjoy solving complex data challenges, collaborating with teams, and leveraging modern tools like Generative AI to improve development efficiency.
+          I'm a Data Engineer with 5+ years of experience designing and operating data pipelines that
+          companies actually depend on — not proofs of concept. My focus is the unglamorous part that
+          makes systems trustworthy: schema validation, reconciliation, idempotent reprocessing, SLA
+          monitoring, and the kind of incremental design that survives a bad deploy at 2am.
+        </p>
+        <p>
+          I've worked across healthcare claims and financial-services data under real compliance
+          constraints, and I build personal systems the same way I'd build a production one — recently
+          that meant standing up a full real-time streaming platform from scratch: Kafka, Spark
+          Structured Streaming, Delta Lake, Airflow, and dbt, wired to a live dashboard.
+        </p>
+        <p>
+          I lean on Generative AI tools deliberately — for debugging speed and documentation, never as a
+          substitute for understanding what the system is actually doing.
         </p>
       </div>
-    </section>
+      <div class="about__stats">
+        <div class="stat-card">
+          <span class="stat-card__num mono">5+</span>
+          <span class="stat-card__label">years in production data engineering</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__num mono">3</span>
+          <span class="stat-card__label">domains: healthcare, fintech, consumer streaming</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__num mono">7</span>
+          <span class="stat-card__label">tools in one real-time pipeline: Kafka → Angular</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="experience" class="section alt">
-      <div class="container">
-        <h2>Experience</h2>
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="section__head">
+      <p class="eyebrow mono">experience</p>
+      <h2>Where the pipelines have run in production.</h2>
+    </div>
 
-        <div class="card">
-          <h3>Data Engineer — Apple (Contract)</h3>
-          <p class="muted">Oct 2023 – Present • Remote • Snowflake • AWS • Airflow • Python • SQL • PySpark</p>
-          <ul>
+    <div class="timeline">
+      <article class="timeline__item">
+        <div class="timeline__marker" aria-hidden="true"></div>
+        <div class="timeline__card tilt-card">
+          <div class="timeline__top">
+            <div>
+              <h3>Data Engineer <span class="timeline__at">— Apple</span> <span class="tag tag--muted">Contract</span></h3>
+              <p class="timeline__meta mono">oct 2023 — present &middot; remote</p>
+            </div>
+          </div>
+          <ul class="timeline__list">
             <li>Designed and orchestrated scalable ETL/ELT pipelines using Python, SQL, Apache Airflow, and PySpark to ingest and transform large-scale datasets into Snowflake for analytics and reporting.</li>
-            <li>Built distributed data processing workflows to clean, standardize, and enrich multi-source datasets, improving data consistency and reliability.</li>
-            <li>Implemented incremental loading strategies and idempotent pipeline design to improve pipeline performance and stability.</li>
+            <li>Built distributed data-processing workflows to clean, standardize, and enrich multi-source datasets, improving data consistency and reliability.</li>
+            <li>Implemented incremental loading and idempotent pipeline design to improve performance and stability.</li>
             <li>Developed reusable, configuration-driven ingestion and transformation frameworks to accelerate onboarding of new data sources.</li>
-            <li>Implemented automated data quality checks including schema validation, duplicate detection, null checks, and reconciliation rules.</li>
-            <li>Optimized Snowflake queries and Spark transformations using efficient joins, partitioning, and query tuning techniques.</li>
-            <li>Built monitoring and alerting mechanisms using Airflow SLAs, retry strategies, structured logging, and AWS CloudWatch.</li>
-            <li>Leveraged Generative AI tools such as ChatGPT and GitHub Copilot to accelerate SQL development, debugging, and documentation.</li>
+            <li>Built automated data-quality checks: schema validation, duplicate detection, null checks, and reconciliation rules.</li>
+            <li>Optimized Snowflake queries and Spark transformations with efficient joins, partitioning, and query tuning.</li>
+            <li>Built monitoring and alerting using Airflow SLAs, retry strategies, structured logging, and AWS CloudWatch.</li>
           </ul>
+          <div class="tag-row">
+            <span class="tag mono">snowflake</span><span class="tag mono">aws</span><span class="tag mono">airflow</span><span class="tag mono">python</span><span class="tag mono">pyspark</span><span class="tag mono">sql</span>
+          </div>
         </div>
+      </article>
 
-        <div class="card">
-          <h3>Data Engineer — Bank of America</h3>
-          <p class="muted">May 2019 – Mar 2022 • Hyderabad, India • PySpark • SQL • AWS Glue • S3 • Lambda • Redshift</p>
-          <ul>
-            <li>Developed distributed data processing workflows using Apache Spark with efficient joins, partitioning strategies, and incremental processing.</li>
+      <article class="timeline__item">
+        <div class="timeline__marker" aria-hidden="true"></div>
+        <div class="timeline__card tilt-card">
+          <div class="timeline__top">
+            <div>
+              <h3>Data Engineer <span class="timeline__at">— Bank of America</span></h3>
+              <p class="timeline__meta mono">may 2019 — mar 2022 &middot; hyderabad, india</p>
+            </div>
+          </div>
+          <ul class="timeline__list">
+            <li>Developed distributed data-processing workflows using Apache Spark with efficient joins, partitioning strategies, and incremental processing.</li>
             <li>Designed and optimized complex SQL queries for analytical workloads, enabling faster reporting and ad-hoc analysis.</li>
-            <li>Integrated AWS services including S3, Glue, and Lambda to automate data ingestion, transformation, and orchestration workflows.</li>
-            <li>Implemented data validation and reconciliation checks across pipeline stages to ensure completeness, accuracy, and consistency.</li>
-            <li>Built monitoring and logging mechanisms to detect failures, automate retries, and improve production stability.</li>
-            <li>Collaborated with analysts, business stakeholders, and engineering teams to deliver curated datasets for reporting and compliance needs.</li>
-            <li>Applied data governance practices including schema standardization, naming conventions, and secure handling of sensitive financial data.</li>
+            <li>Integrated AWS S3, Glue, and Lambda to automate ingestion, transformation, and orchestration workflows.</li>
+            <li>Implemented data validation and reconciliation checks across pipeline stages for completeness and accuracy.</li>
+            <li>Built monitoring and logging to detect failures, automate retries, and improve production stability.</li>
+            <li>Applied data governance: schema standardization, naming conventions, and secure handling of sensitive financial data.</li>
           </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <div class="container">
-        <h2>Projects</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>Customer Retention & Churn Dashboard</h3>
-            <p>Analyzed churn drivers with Python and visualized trends in Tableau.</p>
-            <p class="muted">Python • Matplotlib • Tableau</p>
-            <a href="https://github.com/Niha1104/Customer-Retention-Dashboard" target="_blank" rel="noopener">View on GitHub</a>
-          </div>
-
-          <div class="card">
-  <h3>Real-Time S3 → Snowflake Snowpipe Pipeline</h3>
-  <p>Event-driven ingestion from AWS S3 into Snowflake using Snowpipe AUTO_INGEST, with Streams + Tasks merging into curated tables and basic DQ checks.</p>
-  <p class="muted">AWS S3 • Snowflake • Snowpipe • Streams • Tasks • SQL</p>
-  <a href="https://github.com/Niha1104/realtime-s3-snowflake-snowpipe" target="_blank" rel="noopener">View on GitHub</a>
-</div>
-
-          <div class="card">
-            <h3>Compliance Monitoring with Anomaly Detection</h3>
-            <p>ETL + anomaly logic + Power BI dashboard; reduced manual review by ~40%.</p>
-            <p class="muted">Python • SQL • Power BI</p>
-            <a href="https://github.com/Niha1104/Compliance-Monitoring-Dashboard" target="_blank" rel="noopener">View on GitHub</a>
-          </div>
-
-          <div class="card">
-            <h3>Healthcare Claims Analysis</h3>
-            <p>Explored claims data and built visuals to communicate insights.</p>
-            <p class="muted">Python • Pandas • Matplotlib</p>
-            <a href="https://github.com/Niha1104/Healthcare-Claims-Analysis" target="_blank" rel="noopener">View on GitHub</a>
-          </div>
-
-          <div class="card">
-            <h3>Sales Performance Dashboard</h3>
-            <p>Interactive Tableau dashboard analyzing sales and profit trends.</p>
-            <p class="muted">Python • Pandas • Tableau</p>
-            <a href="https://github.com/Niha1104/Sales-Performance-Dashboard" target="_blank" rel="noopener">View on GitHub</a>
-          </div>
-
-          <div class="card">
-            <h3>Real-Time Healthcare Compliance</h3>
-            <p>Production-style simulation for claims validation, anomalies, and KPI reporting.</p>
-            <p class="muted">Python • SQL • Power BI • ETL</p>
-            <a href="https://github.com/Niha1104/Real-Time-Healthcare-Compliance" target="_blank" rel="noopener">View on GitHub</a>
+          <div class="tag-row">
+            <span class="tag mono">pyspark</span><span class="tag mono">sql</span><span class="tag mono">aws glue</span><span class="tag mono">s3</span><span class="tag mono">lambda</span><span class="tag mono">redshift</span>
           </div>
         </div>
-      </div>
-    </section>
+      </article>
+    </div>
+  </section>
 
-    <section id="skills" class="section alt">
-      <div class="container">
-        <h2>Skills</h2>
-        <div class="chips">
-          <span>SQL</span><span>Python</span><span>Snowflake</span><span>Apache Airflow</span><span>AWS (S3, Glue)</span>
-          <span>Redshift</span><span>PySpark</span><span>Power BI</span><span>ETL/ELT</span><span>Data Quality</span>
-          <span>Data Governance</span><span>Monitoring & Alerts</span><span>GenAI (ChatGPT, Copilot)</span>
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="section__head">
+      <p class="eyebrow mono">projects</p>
+      <h2>Systems I've built end to end.</h2>
+    </div>
+
+    <!-- Featured project -->
+    <article class="featured-project tilt-card">
+      <div class="featured-project__body">
+        <span class="tag tag--accent mono">featured &middot; personal build</span>
+        <h3>Real-Time Customer Engagement Streaming Pipeline</h3>
+        <p class="featured-project__lede">
+          A complete real-time data platform, built and debugged from scratch: live customer engagement
+          events flow through Kafka, get processed in real time by Spark Structured Streaming, land in a
+          Delta Lake Lakehouse, get orchestrated by Airflow, modeled and tested with dbt, and surfaced on a
+          live Angular dashboard — all running end to end in Docker.
+        </p>
+        <ul class="featured-project__list">
+          <li>Streamed live events through <strong>Apache Kafka</strong>, processed in real time with <strong>Spark Structured Streaming</strong> into bronze/silver <strong>Delta Lake</strong> tables (medallion architecture).</li>
+          <li>Orchestrated data-quality checks with <strong>Apache Airflow</strong> — scheduled DAG, retries, verified against real streaming data via both manual and scheduled runs.</li>
+          <li>Modeled and tested analytics-ready marts with <strong>dbt</strong>: staging + marts SQL models, 8 automated tests, all passing against live data.</li>
+          <li>Built a <strong>FastAPI</strong> backend and <strong>Angular</strong> dashboard to visualize daily active users, revenue, and event volume in real time.</li>
+          <li>Added <strong>GitHub Actions CI</strong> to validate Python syntax and dbt models automatically on every push.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag mono">kafka</span><span class="tag mono">spark-structured-streaming</span><span class="tag mono">delta-lake</span><span class="tag mono">airflow</span><span class="tag mono">dbt</span><span class="tag mono">fastapi</span><span class="tag mono">angular</span><span class="tag mono">docker</span><span class="tag mono">github-actions</span>
         </div>
+        <a href="https://github.com/Niha1104/apple-engagement-streaming-pipeline" target="_blank" rel="noopener" class="btn btn--primary btn--sm">View on GitHub →</a>
       </div>
-    </section>
 
-    <section id="resume" class="section">
-      <div class="container">
-        <h2>Resume</h2>
-        <p><a class="btn primary" href="assets/Niharika__Data_Engineer.docx" target="_blank" rel="noopener">Open Resume (PDF)</a></p>
+      <div class="pipeline-diagram" aria-hidden="true">
+        <svg viewBox="0 0 340 180" class="pipeline-svg">
+          <defs>
+            <path id="flowpath" d="M20,30 L100,30 L100,90 L180,90 L180,150 L260,150 L260,90 L320,90"/>
+          </defs>
+          <path d="M20,30 L100,30 L100,90 L180,90 L180,150 L260,150 L260,90 L320,90" class="pipeline-line"/>
+          <circle r="3.4" class="pipeline-dot"><animateMotion dur="4.2s" repeatCount="indefinite"><mpath href="#flowpath"/></animateMotion></circle>
+          <circle r="3.4" class="pipeline-dot pipeline-dot--b"><animateMotion dur="4.2s" begin="1.4s" repeatCount="indefinite"><mpath href="#flowpath"/></animateMotion></circle>
+          <circle r="3.4" class="pipeline-dot pipeline-dot--c"><animateMotion dur="4.2s" begin="2.8s" repeatCount="indefinite"><mpath href="#flowpath"/></animateMotion></circle>
+
+          <g class="pipeline-node" transform="translate(20,30)"><circle r="9"/></g>
+          <g class="pipeline-node" transform="translate(100,90)"><circle r="9"/></g>
+          <g class="pipeline-node" transform="translate(180,150)"><circle r="9"/></g>
+          <g class="pipeline-node" transform="translate(260,90)"><circle r="9"/></g>
+          <g class="pipeline-node pipeline-node--end" transform="translate(320,90)"><circle r="9"/></g>
+
+          <text x="20" y="16" class="pipeline-label">kafka</text>
+          <text x="100" y="76" class="pipeline-label">spark</text>
+          <text x="180" y="168" class="pipeline-label">delta lake</text>
+          <text x="260" y="76" class="pipeline-label">dbt</text>
+          <text x="292" y="112" class="pipeline-label">dashboard</text>
+        </svg>
       </div>
-    </section>
+    </article>
 
-    <section id="contact" class="section alt">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:niharikaga99@gmail.com">YOUR_EMAIL</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/niharikaga99/" target="_blank" rel="noopener">niharikaga99</a></p>
-        <p>GitHub: <a href="https://github.com/Niha1104" target="_blank" rel="noopener">Niha1104</a></p>
+    <div class="project-grid">
+      <article class="project-card tilt-card">
+        <h3>Real-Time S3 → Snowflake Snowpipe Pipeline</h3>
+        <p>Event-driven ingestion from AWS S3 into Snowflake using Snowpipe AUTO_INGEST, with Streams + Tasks merging into curated tables and built-in data-quality checks.</p>
+        <div class="tag-row"><span class="tag mono">s3</span><span class="tag mono">snowflake</span><span class="tag mono">snowpipe</span><span class="tag mono">streams &amp; tasks</span></div>
+        <a href="https://github.com/Niha1104/realtime-s3-snowflake-snowpipe" target="_blank" rel="noopener" class="card-link">View on GitHub →</a>
+      </article>
+
+      <article class="project-card tilt-card">
+        <h3>Compliance Monitoring with Anomaly Detection</h3>
+        <p>ETL pipeline plus anomaly-detection logic feeding a Power BI dashboard; reduced manual review effort by roughly 40%.</p>
+        <div class="tag-row"><span class="tag mono">python</span><span class="tag mono">sql</span><span class="tag mono">power bi</span></div>
+        <a href="https://github.com/Niha1104/Compliance-Monitoring-Dashboard" target="_blank" rel="noopener" class="card-link">View on GitHub →</a>
+      </article>
+
+      <article class="project-card tilt-card">
+        <h3>Real-Time Healthcare Compliance</h3>
+        <p>Production-style simulation for claims validation, anomaly flags, and KPI reporting on streaming healthcare data.</p>
+        <div class="tag-row"><span class="tag mono">python</span><span class="tag mono">sql</span><span class="tag mono">power bi</span><span class="tag mono">etl</span></div>
+        <a href="https://github.com/Niha1104/Real-Time-Healthcare-Compliance" target="_blank" rel="noopener" class="card-link">View on GitHub →</a>
+      </article>
+
+      <article class="project-card tilt-card">
+        <h3>Customer Retention &amp; Churn Dashboard</h3>
+        <p>Analyzed churn drivers with Python and visualized behavioral trends in Tableau for a subscription-style dataset.</p>
+        <div class="tag-row"><span class="tag mono">python</span><span class="tag mono">matplotlib</span><span class="tag mono">tableau</span></div>
+        <a href="https://github.com/Niha1104/Customer-Retention-Dashboard" target="_blank" rel="noopener" class="card-link">View on GitHub →</a>
+      </article>
+
+      <article class="project-card tilt-card">
+        <h3>Healthcare Claims Analysis</h3>
+        <p>Explored real-world claims data and built visuals that made cost and utilization patterns legible to non-technical stakeholders.</p>
+        <div class="tag-row"><span class="tag mono">python</span><span class="tag mono">pandas</span><span class="tag mono">matplotlib</span></div>
+        <a href="https://github.com/Niha1104/Healthcare-Claims-Analysis" target="_blank" rel="noopener" class="card-link">View on GitHub →</a>
+      </article>
+
+      <article class="project-card tilt-card">
+        <h3>Sales Performance Dashboard</h3>
+        <p>Interactive Tableau dashboard analyzing sales and profit trends across regions and product lines.</p>
+        <div class="tag-row"><span class="tag mono">python</span><span class="tag mono">pandas</span><span class="tag mono">tableau</span></div>
+        <a href="https://github.com/Niha1104/Sales-Performance-Dashboard" target="_blank" rel="noopener" class="card-link">View on GitHub →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="section__head">
+      <p class="eyebrow mono">skills</p>
+      <h2>Grouped the way a pipeline actually flows.</h2>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-group tilt-card">
+        <p class="skill-group__title mono">ingest &amp; stream</p>
+        <div class="tag-row"><span class="tag mono">apache kafka</span><span class="tag mono">spark structured streaming</span><span class="tag mono">snowpipe</span></div>
       </div>
-    </section>
-
-    <footer class="footer">
-      <div class="container">
-        <p>© <span id="year"></span> Niharika Garikaparthi</p>
+      <div class="skill-group tilt-card">
+        <p class="skill-group__title mono">process &amp; orchestrate</p>
+        <div class="tag-row"><span class="tag mono">pyspark</span><span class="tag mono">apache airflow</span><span class="tag mono">dbt</span><span class="tag mono">etl / elt</span></div>
       </div>
-    </footer>
-  </main>
+      <div class="skill-group tilt-card">
+        <p class="skill-group__title mono">store &amp; model</p>
+        <div class="tag-row"><span class="tag mono">delta lake</span><span class="tag mono">snowflake</span><span class="tag mono">redshift</span></div>
+      </div>
+      <div class="skill-group tilt-card">
+        <p class="skill-group__title mono">cloud &amp; infra</p>
+        <div class="tag-row"><span class="tag mono">aws (s3, glue, lambda)</span><span class="tag mono">docker</span><span class="tag mono">github actions</span></div>
+      </div>
+      <div class="skill-group tilt-card">
+        <p class="skill-group__title mono">serve &amp; visualize</p>
+        <div class="tag-row"><span class="tag mono">fastapi</span><span class="tag mono">angular</span><span class="tag mono">power bi</span><span class="tag mono">tableau</span></div>
+      </div>
+      <div class="skill-group tilt-card">
+        <p class="skill-group__title mono">languages &amp; quality</p>
+        <div class="tag-row"><span class="tag mono">python</span><span class="tag mono">sql</span><span class="tag mono">data quality</span><span class="tag mono">data governance</span><span class="tag mono">genai (copilot, chatgpt)</span></div>
+      </div>
+    </div>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- CONTACT -->
+  <section class="section section--contact" id="contact">
+    <div class="section__head">
+      <p class="eyebrow mono">contact</p>
+      <h2>Open to real-time data platform &amp; streaming roles.</h2>
+    </div>
+    <div class="contact__row">
+      <a href="mailto:niharikaga99@gmail.com" class="contact__link">
+        <span class="contact__label mono">email</span>
+        <span>niharikaga99@gmail.com</span>
+      </a>
+      <a href="https://www.linkedin.com/in/niharikaga99/" target="_blank" rel="noopener" class="contact__link">
+        <span class="contact__label mono">linkedin</span>
+        <span>niharikaga99</span>
+      </a>
+      <a href="https://github.com/Niha1104" target="_blank" rel="noopener" class="contact__link">
+        <span class="contact__label mono">github</span>
+        <span>Niha1104</span>
+      </a>
+    </div>
+    <a href="assets/Niharika__Data_Engineer.docx" class="btn btn--primary" style="margin-top:2rem;">Download résumé</a>
+  </section>
+
+</main>
+
+<footer class="site-footer mono">
+  <span>© <span id="year"></span> Niharika Garikaparthi — built with a real streaming pipeline behind it</span>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
