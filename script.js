@@ -149,6 +149,67 @@ const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 })();
 
 /* ============================================================
+   RESUME PREVIEW MODAL
+   ============================================================ */
+(function resumeModalSetup() {
+  const modal = document.getElementById('resume-modal');
+  const backdrop = document.getElementById('resume-modal-backdrop');
+  const closeBtn = document.getElementById('resume-modal-close');
+  const body = document.getElementById('resume-modal-body');
+  const triggers = [
+    document.getElementById('resume-preview-btn'),
+    document.getElementById('resume-preview-btn-2'),
+  ].filter(Boolean);
+
+  if (!modal || triggers.length === 0) return;
+
+  const RESUME_PATH = 'assets/Niharika__Data_Engineer.docx';
+  let loaded = false;
+
+  function openModal() {
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    if (!loaded) loadResume();
+  }
+
+  function closeModal() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  function loadResume() {
+    // mammoth.js converts the .docx file to HTML entirely client-side --
+    // no server, no separate PDF export needed, just the same file
+    // already used for the download button.
+    fetch(RESUME_PATH)
+      .then((res) => {
+        if (!res.ok) throw new Error('Could not fetch resume file.');
+        return res.arrayBuffer();
+      })
+      .then((buffer) => mammoth.convertToHtml({ arrayBuffer: buffer }))
+      .then((result) => {
+        body.innerHTML = result.value;
+        loaded = true;
+      })
+      .catch((err) => {
+        body.innerHTML =
+          '<p class="resume-modal__error">Could not load resume preview. ' +
+          'Try the [ ./resume.docx ] download button instead.</p>';
+        console.error(err);
+      });
+  }
+
+  triggers.forEach((btn) => btn.addEventListener('click', openModal));
+  backdrop.addEventListener('click', closeModal);
+  closeBtn.addEventListener('click', closeModal);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+})();
+
+/* ============================================================
    HERO CANVAS — animated 3D pipeline / DAG graph
    ============================================================ */
 (function heroGraph() {
