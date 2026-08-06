@@ -84,26 +84,19 @@
         <div class="term-card__bar"><span class="term-dot term-dot--r"></span><span class="term-dot term-dot--y"></span><span class="term-dot term-dot--g"></span><span class="term-card__label">about.md</span></div>
         <div class="term-card__body">
           <p>
-            I'm a Data Engineer with 5+ years of experience designing and operating data pipelines that
-            companies actually depend on — not proofs of concept. My focus is the unglamorous part that
-            makes systems trustworthy: schema validation, reconciliation, idempotent reprocessing, SLA
-            monitoring, and the kind of incremental design that survives a bad deploy at 2am.
+            I'm a Data engineer with 6+ years building pipelines that companies actually run on — not proofs of concept. The part I care about most is the unglamorous half of the job: schema validation, reconciliation, idempotent reprocessing, SLA monitoring — the stuff that decides whether a pipeline survives a bad deploy at 2am, or pages someone.
           </p>
           <p>
-            I've worked across healthcare claims and financial-services data under real compliance
-            constraints, and I build personal systems the same way I'd build a production one — recently
-            that meant standing up a full real-time streaming platform from scratch: Kafka, Spark
-            Structured Streaming, Delta Lake, Airflow, and dbt, wired to a live dashboard.
+            Most of that experience is in healthcare claims and financial services, working under real compliance constraints where getting the data wrong isn't just a bug — it's an audit finding. I hold personal projects to the same bar: this portfolio's flagship project is a full real-time streaming platform I built from scratch — Kafka, Spark Structured Streaming, Delta Lake, Airflow, and dbt, wired to a live dashboard, deployed and running today.
           </p>
           <p>
-            I lean on Generative AI tools deliberately — for debugging speed and documentation, never as
-            a substitute for understanding what the system is actually doing.
+            I use GenAI tools deliberately, to move faster on debugging and documentation — never as a substitute for understanding what the system is actually doing. If I can't explain why a pipeline works, I don't consider it finished.
           </p>
         </div>
       </div>
       <div class="about__stats">
         <div class="stat-card">
-          <span class="stat-card__num mono">5+</span>
+          <span class="stat-card__num mono">6</span>
           <span class="stat-card__label">years in production data engineering</span>
         </div>
         <div class="stat-card">
@@ -133,19 +126,13 @@
           <div class="term-card__body">
             <div class="timeline__top">
               <h3>Data Engineer <span class="timeline__at">— Apple</span> <span class="tag tag--muted">contract</span></h3>
-              <p class="timeline__meta mono">oct 2023 — present &middot; remote</p>
+              <p class="timeline__meta mono">Oct 2023 — Present &middot; United States</p>
             </div>
             <ul class="timeline__list">
-              <li>Designed and orchestrated scalable ETL/ELT pipelines using Python, SQL, Apache Airflow, and PySpark to ingest and transform large-scale datasets into Snowflake for analytics and reporting.</li>
-              <li>Built distributed data-processing workflows to clean, standardize, and enrich multi-source datasets, improving data consistency and reliability.</li>
-              <li>Implemented incremental loading and idempotent pipeline design to improve performance and stability.</li>
-              <li>Developed reusable, configuration-driven ingestion and transformation frameworks to accelerate onboarding of new data sources.</li>
-              <li>Built automated data-quality checks: schema validation, duplicate detection, null checks, and reconciliation rules.</li>
-              <li>Optimized Snowflake queries and Spark transformations with efficient joins, partitioning, and query tuning.</li>
-              <li>Built monitoring and alerting using Airflow SLAs, retry strategies, structured logging, and AWS CloudWatch.</li>
+              <li>At Apple, I own the ETL/ELT backbone behind enterprise analytics — Python, SQL, Airflow, and PySpark pipelines moving millions of records a day into Snowflake. I built the incremental-load and idempotent design patterns that keep daily production runs stable, the configuration-driven ingestion frameworks that let new data sources onboard in days instead of weeks, and the automated quality checks — schema validation, duplicate detection, reconciliation — that catch problems before they reach a dashboard. I tune Snowflake and Spark for performance, wire up Airflow SLAs and CloudWatch alerting so incidents get caught fast, and use GenAI tools deliberately to move faster without losing my grip on what the system is actually doing. Most of what I ship becomes the curated dataset a data scientist or product team builds on next.</li>
             </ul>
             <div class="tag-row">
-              <span class="tag mono">snowflake</span><span class="tag mono">aws</span><span class="tag mono">airflow</span><span class="tag mono">python</span><span class="tag mono">pyspark</span><span class="tag mono">sql</span>
+              <span class="tag mono">snowflake</span><span class="tag mono">aws</span><span class="tag mono">airflow</span><span class="tag mono">python</span><span class="tag mono">pyspark</span><span class="tag mono">sql</span><span class="tag mono">genai/copilot</span>
             </div>
           </div>
         </div>
@@ -158,15 +145,10 @@
           <div class="term-card__body">
             <div class="timeline__top">
               <h3>Data Engineer <span class="timeline__at">— Bank of America</span></h3>
-              <p class="timeline__meta mono">may 2019 — mar 2022 &middot; hyderabad, india</p>
+              <p class="timeline__meta mono">Jun 2019 — Mar 2022 &middot; Hyderabad, India</p>
             </div>
             <ul class="timeline__list">
-              <li>Developed distributed data-processing workflows using Apache Spark with efficient joins, partitioning strategies, and incremental processing.</li>
-              <li>Designed and optimized complex SQL queries for analytical workloads, enabling faster reporting and ad-hoc analysis.</li>
-              <li>Integrated AWS S3, Glue, and Lambda to automate ingestion, transformation, and orchestration workflows.</li>
-              <li>Implemented data validation and reconciliation checks across pipeline stages for completeness and accuracy.</li>
-              <li>Built monitoring and logging to detect failures, automate retries, and improve production stability.</li>
-              <li>Applied data governance: schema standardization, naming conventions, and secure handling of sensitive financial data.</li>
+              <li>At Bank of America, I built and ran the production ETL pipelines — PySpark, SQL, AWS Glue — that turned high-volume banking data into analytics-ready models under real regulatory weight. I designed distributed Spark workflows with efficient joins and incremental processing, optimized complex SQL for both scheduled reporting and ad-hoc analysis, and built the validation and reconciliation checks that kept financial datasets accurate and audit-ready. I automated retries and monitoring to keep batch processing stable, applied data governance practices for handling sensitive financial data, and delivered the clean, validated datasets that fed compliance reporting and early risk-modeling work — the kind of pipeline where "probably fine" isn't good enough.</li>
             </ul>
             <div class="tag-row">
               <span class="tag mono">pyspark</span><span class="tag mono">sql</span><span class="tag mono">aws glue</span><span class="tag mono">s3</span><span class="tag mono">lambda</span><span class="tag mono">redshift</span>
@@ -311,28 +293,36 @@
 
     <div class="skills-grid">
       <div class="term-card skill-group tilt-card">
-        <div class="term-card__bar"><span class="term-dot term-dot--r"></span><span class="term-dot term-dot--y"></span><span class="term-dot term-dot--g"></span><span class="term-card__label">ingest_stream/</span></div>
-        <div class="term-card__body"><div class="tag-row"><span class="tag mono">apache kafka</span><span class="tag mono">spark structured streaming</span><span class="tag mono">snowpipe</span></div></div>
+        <div class="term-card__bar"><span class="term-dot term-dot--r"></span><span class="term-dot term-dot--y"></span><span class="term-dot term-dot--g"></span><span class="term-card__label">Ingest_Stream/</span></div>
+        <div class="term-card__body"><div class="tag-row"><span class="tag mono">Apache Kafka</span><span class="tag mono">Spark Structured Streaming</span><span class="tag mono">Snowpipe</span><span class="tag mono">Rest APIs</span><span class="tag mono">API Integration</span></div></div>
       </div>
       <div class="term-card skill-group tilt-card">
-        <div class="term-card__bar"><span class="term-dot term-dot--r"></span><span class="term-dot term-dot--y"></span><span class="term-dot term-dot--g"></span><span class="term-card__label">process_orchestrate/</span></div>
-        <div class="term-card__body"><div class="tag-row"><span class="tag mono">pyspark</span><span class="tag mono">apache airflow</span><span class="tag mono">dbt</span><span class="tag mono">etl / elt</span></div></div>
+        <div class="term-card__bar"><span class="term-dot term-dot--r"></span><span class="term-dot term-dot--y"></span><span class="term-dot term-dot--g"></span><span class="term-card__label">Process_Orchestrate/</span></div>
+        <div class="term-card__body"><div class="tag-row"><span class="tag mono">Pyspark</span><span class="tag mono">Apache Airflow</span><span class="tag mono">DBT</span><span class="tag mono">ETL / ELT</span><span class="tag mono">Incremental Processing</span></div></div>
       </div>
       <div class="term-card skill-group tilt-card">
-        <div class="term-card__bar"><span class="term-dot term-dot--r"></span><span class="term-dot term-dot--y"></span><span class="term-dot term-dot--g"></span><span class="term-card__label">store_model/</span></div>
-        <div class="term-card__body"><div class="tag-row"><span class="tag mono">delta lake</span><span class="tag mono">snowflake</span><span class="tag mono">redshift</span></div></div>
+        <div class="term-card__bar"><span class="term-dot term-dot--r"></span><span class="term-dot term-dot--y"></span><span class="term-dot term-dot--g"></span><span class="term-card__label">Store_model/</span></div>
+        <div class="term-card__body"><div class="tag-row"><span class="tag mono">Delta Lake</span><span class="tag mono">Snowflake</span><span class="tag mono">Redshift</span><span class="tag mono">Sql Server</span><span class="tag mono">SSIS</span><span class="tag mono">Data Modeling</span></div></div>
       </div>
       <div class="term-card skill-group tilt-card">
-        <div class="term-card__bar"><span class="term-dot term-dot--r"></span><span class="term-dot term-dot--y"></span><span class="term-dot term-dot--g"></span><span class="term-card__label">cloud_infra/</span></div>
-        <div class="term-card__body"><div class="tag-row"><span class="tag mono">aws (s3, glue, lambda)</span><span class="tag mono">docker</span><span class="tag mono">github actions</span></div></div>
+        <div class="term-card__bar"><span class="term-dot term-dot--r"></span><span class="term-dot term-dot--y"></span><span class="term-dot term-dot--g"></span><span class="term-card__label">Cloud_Infra/</span></div>
+        <div class="term-card__body"><div class="tag-row"><span class="tag mono">AWS (s3, glue,lambda,cloudwatch,dms)</span><span class="tag mono">Docker</span><span class="tag mono">Github Actions</span><span class="tag mono">Azure CI/CD</span><span class="tag mono">Git</span></div></div>
       </div>
       <div class="term-card skill-group tilt-card">
-        <div class="term-card__bar"><span class="term-dot term-dot--r"></span><span class="term-dot term-dot--y"></span><span class="term-dot term-dot--g"></span><span class="term-card__label">serve_visualize/</span></div>
-        <div class="term-card__body"><div class="tag-row"><span class="tag mono">fastapi</span><span class="tag mono">angular</span><span class="tag mono">power bi</span><span class="tag mono">tableau</span></div></div>
+        <div class="term-card__bar"><span class="term-dot term-dot--r"></span><span class="term-dot term-dot--y"></span><span class="term-dot term-dot--g"></span><span class="term-card__label">Serve_Visualize/</span></div>
+        <div class="term-card__body"><div class="tag-row"><span class="tag mono">Fastapi</span><span class="tag mono">Angular</span><span class="tag mono">Power BI</span><span class="tag mono">Tableau</span></div></div>
       </div>
       <div class="term-card skill-group tilt-card">
-        <div class="term-card__bar"><span class="term-dot term-dot--r"></span><span class="term-dot term-dot--y"></span><span class="term-dot term-dot--g"></span><span class="term-card__label">languages_quality/</span></div>
-        <div class="term-card__body"><div class="tag-row"><span class="tag mono">python</span><span class="tag mono">sql</span><span class="tag mono">data quality</span><span class="tag mono">data governance</span><span class="tag mono">genai</span></div></div>
+        <div class="term-card__bar"><span class="term-dot term-dot--r"></span><span class="term-dot term-dot--y"></span><span class="term-dot term-dot--g"></span><span class="term-card__label">Languages_systems/</span></div>
+        <div class="tag-row"><span class="tag mono">Python</span><span class="tag mono">SQL</span><span class="tag mono">Scala</span><span class="tag mono">Java</span><span class="tag mono">Data Structures</span><span class="tag mono">oop</span><span class="tag mono">Concurrency</span><span class="tag mono">Scalable System Design</span></div></div>
+    </div>
+     <div class="term-card skill-group tilt-card">
+        <div class="term-card__bar"><span class="term-dot term-dot--r"></span><span class="term-dot term-dot--y"></span><span class="term-dot term-dot--g"></span><span class="term-card__label">Data_Quality_Governance/</span></div>
+        <div class="term-card__body"><div class="tag-row"><span class="tag mono">Data Quality Frameworks</span><span class="tag mono">Data Governance</span><span class="tag mono">Access Control</span><span class="tag mono">Sensitive Data Handling</span><span class="tag mono">Audit & Control Mechanisms</span></div></div>
+      </div>
+    <div class="term-card skill-group tilt-card">
+      <div class="term-card__bar"><span class="term-dot term-dot--r"></span><span class="term-dot term-dot--y"></span><span class="term-dot term-dot--g"></span><span class="term-card__label">AI_Assisted_dev/</span></div>
+      <div class="term-card__body"><div class="tag-row"><span class="tag mono">Generative AI</span><span class="tag mono">Chat gpt</span><span class="tag mono">GitHUB Copilot</span><span class="tag mono">AI-Assisted sql optimization</span></div></div>
       </div>
     </div>
   </section>
