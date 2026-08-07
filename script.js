@@ -42,7 +42,7 @@ const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const line1 = document.getElementById('type-1');
   const line2 = document.getElementById('type-2');
   const TEXT_1 = 'Niharika Garikaparthi — Data Engineer';
-  const TEXT_2 = 'I build the pipelines that turn raw events into decisions — in real time. 5+ years designing production-grade streaming and batch data platforms across healthcare, financial services, and consumer-scale event data.';
+  const TEXT_2 = 'I build the pipelines that turn raw events into decisions — in real time. 6 years designing production-grade streaming and batch data platforms across healthcare, financial services, and consumer-scale event data.';
 
   if (REDUCED) {
     line1.textContent = TEXT_1;
